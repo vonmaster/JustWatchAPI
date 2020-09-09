@@ -4,7 +4,10 @@ import requests
 import sys
 
 
-HEADER = {'User-Agent':'JustWatch Python client (github.com/dawoudt/JustWatchAPI)'}
+HEADER = {
+    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
+                  'Chrome/68.0.3440.84 Safari/537.36'
+}
 
 
 class JustWatch:	
