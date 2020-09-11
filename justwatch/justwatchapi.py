@@ -13,7 +13,9 @@ TIMEOUT = 5
 
 
 def create_session():
-    retry_policy = Retry(connect=5, read=2, redirect=5)
+    retry_policy = Retry(total=5,
+                         backoff_factor=0.1,
+                         status_forcelist=[500, 502, 503, 504])
 
     session = requests.Session()
     session.mount('http://', HTTPAdapter(max_retries=retry_policy))
